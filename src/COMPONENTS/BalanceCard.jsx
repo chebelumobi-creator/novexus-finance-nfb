@@ -45,6 +45,7 @@ export default function BalanceCard() {
         <div className="flex items-center gap-3">
           {user?.profile_photo ? (
             <img
+              
               src={`https://novexus-backend.onrender.com${user.profile_photo}`}
               alt="profile"
               className="w-12 h-12 rounded-full object-cover"
