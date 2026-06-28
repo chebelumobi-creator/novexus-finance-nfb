@@ -45,10 +45,13 @@ export default function BalanceCard() {
         <div className="flex items-center gap-3">
           {user?.profile_photo ? (
             <img
-              
-              src={`https://novexus-backend.onrender.com${user.profile_photo}`}
+              src={
+                user.profile_photo?.startsWith("http")
+                  ? user.profile_photo
+                  : `https://novexus-backend.onrender.com${user.profile_photo}`
+              }
               alt="profile"
-              className="w-12 h-12 rounded-full object-cover"
+              className="w-12 h-12 rounded-full object-cover border-2 border-white"
             />
           ) : (
             <div className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center text-white font-bold text-xl">
